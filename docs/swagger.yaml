@@ -1,0 +1,34 @@
+info:
+  contact: {}
+  description: Documentation for Belajar Resful Api
+  termsOfService: http://swagger.io/terms/
+  title: Belajar Resful Api
+  version: "1.0"
+paths:
+  /orders/code/{orderCode}:
+    get:
+      consumes:
+      - application/json
+      description: Getting Order by Code in detail
+      parameters:
+      - description: code of Order
+        in: header
+        name: x-correlationid
+        required: true
+        type: string
+      - description: code of Order
+        in: path
+        name: orderCode
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: Getting Order by Code
+      tags:
+      - Orders
+swagger: "2.0"
