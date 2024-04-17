@@ -6,7 +6,7 @@ import (
 )
 
 func SetupProvinsiRoutes(router fiber.Router) {
-	provinsi := router.Group("/provinsi")
+	provinsi := router.Group("provinsi")
 
 	// Read all Notes
 	provinsi.Get("/", handler.GetProvinsi)

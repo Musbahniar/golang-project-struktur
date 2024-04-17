@@ -6,7 +6,7 @@ import (
 )
 
 func SetupKotaRoutes(router fiber.Router) {
-	kota := router.Group("/kota")
+	kota := router.Group("kota")
 
 	kota.Get("/", handler.GetKota)
 }
